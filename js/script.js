@@ -1,7 +1,7 @@
 let nombre = '';
 function loginf() {
     // Nombre del archivo JSON
-    const archivoJSON = 'https://fabrizio123450.github.io/datos.github.io/data.json';
+    const archivoJSON = './data.json';
 
     // Utilizar fetch para cargar el archivo JSON
     fetch(archivoJSON)
