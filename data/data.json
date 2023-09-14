@@ -1,0 +1,19 @@
+{
+    "usuarios": [
+        {
+            "nombre_usuario": "fabrizio",
+            "contrasena": "clave12345",
+            "rol": "admin"
+        },
+        {
+            "nombre_usuario": "zaida",
+            "contrasena": "clave12345",
+            "rol": "admin"
+        },
+        {
+            "nombre_usuario": "PEPE",
+            "contrasena": "12345",
+            "rol": "usuario"
+        }
+    ]
+}
