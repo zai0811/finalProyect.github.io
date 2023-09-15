@@ -1,6 +1,6 @@
 const userData = [];
 // Nombre del archivo JSON
-const archivoJSON = './data.json';
+const archivoJSON = '../data/data.json';
 /*Para usar de forma local*/
 //const archivoJSON = 'https://fabrizio123450.github.io/datos.github.io/data.json'; 
 // Utilizar fetch para cargar el archivo JSON
