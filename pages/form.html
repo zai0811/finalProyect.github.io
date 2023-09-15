@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/form.js" defer></script>
-    <title>Formulario con Checkbox</title>
+    <title>Formulario</title>
 </head>
 <body>
     <h2>Formulario con Checkbox</h2>
@@ -31,37 +31,3 @@
     </form>
 </body>
 </html>
-<script>
-    // Obtener los checkboxes por su ID
-    const app1Checkbox = document.getElementById('app1');
-    const app2Checkbox = document.getElementById('app2');
-    const app3Checkbox = document.getElementById('app3');
-
-    // Agregar un evento 'change' a cada checkbox para detectar cambios
-    app1Checkbox.addEventListener('change', function () {
-        if (app1Checkbox.checked) {
-            console.log('App 1 está marcada');
-            console.log(app1Checkbox.value);
-        } else {
-            console.log('App 1 no está marcada');
-        }
-    });
-
-    app2Checkbox.addEventListener('change', function () {
-        if (app2Checkbox.checked) {
-            console.log('App 2 está marcada');
-        } else {
-            console.log('App 2 no está marcada');
-        }
-    });
-
-    app3Checkbox.addEventListener('change', function () {
-        if (app3Checkbox.checked) {
-            console.log('App 3 está marcada');
-        } else {
-            console.log('App 3 no está marcada');
-        }
-    });
-
-    
-</script>

@@ -4,7 +4,7 @@ const userData = [];
 /*Para usar de forma local*/
 const archivoJSON = 'https://fabrizio123450.github.io/datos.github.io/data.json'; 
 // Utilizar fetch para cargar el archivo JSON
-/*fetch(archivoJSON)
+fetch(archivoJSON)
     .then(response => {
         if (!response.ok) {
             throw new Error(`No se pudo cargar el archivo JSON: ${response.status}`);
@@ -23,7 +23,7 @@ const archivoJSON = 'https://fabrizio123450.github.io/datos.github.io/data.json'
     })
     .catch(error => {
         console.error('Error al cargar el archivo JSON:', error);
-    });*/
+    });
 
 function loginf() {
     console.log(userData);
@@ -35,15 +35,38 @@ function loginf() {
         ///if(usuario.nombre_usuario === null && usuario.contrasena === null) return;
         if(name.includes(usuario.nombre_usuario) && pass.includes(usuario.contrasena)){
             console.log("HOLA");
-            if(usuario.rol.includes("usuario")){
-                window.location.href ='./pages/main_page.html';
+            if (usuario.rol.includes("usuario")) {
+                const nombre = document.getElementById('name').value;
+                const pass = document.getElementById('pass').value;
+                const app = params.get('app1');
+                const apptwo = params.get('app2'); 
+                const appthree = params.get('app3');
+                // Construir la URL con parámetros
+                const url = `./pages/main_page.html?name=${encodeURIComponent(nombre)}&pass=${encodeURIComponent(pass)}&app1=${encodeURIComponent(app)}&app2=${encodeURIComponent(apptwo)}&app3=${encodeURIComponent(appthree)}`;
+
+                // Redirigir a Página 2 con los parámetros en la URL
+                window.location.href = url;
+            }else{
+                window.location.href = "./pages/main_page.html";
             }
+        }else{
+            alert("YOU SHALL NOT PASS");
+            return;
         }
     });
 
 }
 function test(){
-    window.location.href ='main_page.html';
+
+        
+            const nombre = document.getElementById('name').value;
+            const pass = document.getElementById('pass').value;
+
+            // Construir la URL con parámetros
+            const url = `./pages/main_page.html?name=${encodeURIComponent(nombre)}&pass=${encodeURIComponent(pass)}`;
+
+            // Redirigir a Página 2 con los parámetros en la URL
+            window.location.href = url;
 }
 function singUp() {
     // Obtener el botón por su ID
@@ -63,12 +86,14 @@ function singUp() {
 const params = new URLSearchParams(window.location.search);
 const nombre = params.get('nombre');
 const password = params.get('contrasena');
-const app = params.get('app1'); 
-console.log(app);
-if(!(nombre === null && password === null)){
-    userData.push({nombre_usuario: nombre, contrasena: password, rol: "usuario"});
-}
+const app = params.get('app1');
+const apptwo = params.get('app2'); 
+const appthree = params.get('app3');
 
+if(!(nombre === null && password === null)){
+    userData.push({nombre_usuario: nombre, contrasena: password, rol: "usuario",apli: [app,apptwo,appthree]});
+}
+console.log(userData);
 // Mostrar los datos en la página
 document.body.innerHTML += `<p>Nombre: ${nombre}</p>`;
 document.body.innerHTML += `<p>Edad: ${password}</p>`;
