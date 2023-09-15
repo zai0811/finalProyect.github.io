@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Centrar verticalmente y apilar elementos */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Espaciado adicional hacia abajo */
+}
+
+
+
+/* Estilos para el formulario */
+#myForm {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para checkboxes y etiquetas */
+input[type="checkbox"] {
+    display: inline-block; /* Mostrar en línea (uno al lado del otro) */
+    margin-right: 5px; /* Espacio entre checkboxes */
+}
+
+label {
+    display: inline-block; /* Mostrar en línea (uno al lado del otro) */
+    margin-right: 10px; /* Espacio entre label y checkbox */
+}
+
+/* Estilos para botones */
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #413f3f;
+}
+
+button[type="submit"]:active {
+    background-color: #1f1d1d;
+}

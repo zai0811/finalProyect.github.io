@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/form.css">
     <script src="../js/form.js" defer></script>
+    <script src="../js/hora.js" defer></script>
     <title>Formulario</title>
 </head>
 <body>
-    <h2>Formulario con Checkbox</h2>
+    <h2>Formulario Sing in</h2>
+    <p id="hora"></p>
     <form action="../index.html" method="get" id="myForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
@@ -19,14 +22,14 @@
         <br>
         <input type="checkbox" id="app1" name="app1" value="app1">
         <label for="app1">App 1</label>
-        <br>
+        
         <input type="checkbox" id="app2" name="app2" value="app2">
         <label for="app2">App 2</label>
-        <br>
+        
         <input type="checkbox" id="app3" name="app3" value="app3">
         <label for="app3">App 3</label>
-        <br>
-        <button type="submit" id="submitButton">Enviar</button>
+        
+        <button type="submit" id="submitButton">Sing in</button>
         <button type="submit" id="backButton">BACK</button>
     </form>
 </body>

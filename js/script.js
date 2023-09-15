@@ -49,6 +49,7 @@ function loginf() {
             }else{
                 window.location.href = "./pages/main_page.html";
             }
+            
         }else{
             alert("YOU SHALL NOT PASS");
             return;
@@ -56,31 +57,10 @@ function loginf() {
     });
 
 }
-function test(){
 
-        
-            const nombre = document.getElementById('name').value;
-            const pass = document.getElementById('pass').value;
-
-            // Construir la URL con parámetros
-            const url = `./pages/main_page.html?name=${encodeURIComponent(nombre)}&pass=${encodeURIComponent(pass)}`;
-
-            // Redirigir a Página 2 con los parámetros en la URL
-            window.location.href = url;
-}
 function singUp() {
-    // Obtener el botón por su ID
-    // const botonRedirigir = document.getElementById('botonSing');
-
-    // Agregar un evento 'click' al botón para redirigir al formulario
-    // botonRedirigir.addEventListener('click', function () {
-    // Redirigir a la URL del formulario
-    console.log("asdasasddsaasdsad");
-    window.location.href = './pages/form.html'; // Reemplaza con el identificador del formulario
-    //});
+    window.location.href = './pages/form.html';
 }
-//document.getElementById('botonLogin').addEventListener('click', alert("HOLAAA"));
-// Obtener los parámetros de la URL
 
 
 const params = new URLSearchParams(window.location.search);
@@ -94,7 +74,3 @@ if(!(nombre === null && password === null)){
     userData.push({nombre_usuario: nombre, contrasena: password, rol: "usuario",apli: [app,apptwo,appthree]});
 }
 console.log(userData);
-// Mostrar los datos en la página
-document.body.innerHTML += `<p>Nombre: ${nombre}</p>`;
-document.body.innerHTML += `<p>Edad: ${password}</p>`;
-document.body.innerHTML += `<p>Edad: ${app}</p>`;

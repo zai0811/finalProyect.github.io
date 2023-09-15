@@ -7,7 +7,7 @@
     <title>Título de tu página</title>
 
     <!-- Enlaces a archivos CSS externos -->
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./css/login.css">
     <!-- Agrega más enlaces CSS si es necesario -->
     <!-- Inclusiones de archivos JavaScript externos -->
     <script src="./js/hora.js" defer></script>
@@ -17,27 +17,19 @@
 
 <body>
     <!-- Contenido de tu página web va aquí -->
-
+    
     <h1>BAUL DE APPS</h1>
-    <p>Contenido de la página...</p>
-    <p id="hora-actual"></p>
-    
-        <div>
-            <input type="text" id="name" placeholder="NOMBRE" />
-            <br>
-            <input type="password" id="pass" placeholder="CONTRASEÑA" />
-            <br>
-            <button type="submit" onclick="test()">Enviar</button>
-        </div>
-    
-    <br>
-    <button type="submit" id="botonLogin" onclick="loginf()">LOGIN</button>
-    <br>
-    <button id="botonSing" onclick="singUp()">singUp</button>
-    <!-- Agrega más enlaces a archivos JavaScript si es necesario -->
-    <h1>Mi Página con un iFrame</h1>
     <p id="hora"></p>
-    <!-- Usar un iframe para renderizar otra página web -->
-    <!--<iframe src="./pages/prueba.html" width="800" height="600" frameborder="0"></iframe>-->
+
+    <div class="login-form">
+        <input type="text" id="name" placeholder="NOMBRE" />
+        <input type="password" id="pass" placeholder="CONTRASEÑA" />
+    </div>
+    <div class="login-buttons">
+        <button type="submit" id="botonLogin" onclick="loginf()">LOGIN</button>
+        <button id="botonSing" onclick="singUp()">singUp</button>
+    </div>
+    
 </body>
+
 </html>

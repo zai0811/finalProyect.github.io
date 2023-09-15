@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/main.js" defer></script>
+    <script src="../js/hora.js" defer></script>
     <title>Mi Página Principal</title>
 </head>
 <body>
     <header>
         <button  class="log-out" onclick="logOut()">Log-out</button>
         <h1>Bienvenido a Mi Página Principal</h1>
-        
+        <p id="hora"></p>
     </header>
 
     <main>
         <h2>Contenido Principal</h2>
+        <!-- Usar un iframe para renderizar otra página web -->
         <iframe src="../pages/fcalculator.html" width="800" height="600" frameborder="0" id="app2"></iframe>
         <iframe src="https://zai0811.github.io/Aplicaciones/" width="800" height="600" frameborder="0" id="app1"></iframe>
     </main>
