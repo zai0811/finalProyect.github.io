@@ -63,8 +63,8 @@ function singUp() {
 
 
 const params = new URLSearchParams(window.location.search);
-const nombre = params.get('nombre');
-const password = params.get('contrasena');
+const nombre = params.get('nombre').toLowerCase();
+const password = params.get('contrasena').toLowerCase();
 const app = params.get('app1');
 const apptwo = params.get('app2'); 
 const appthree = params.get('app3');
