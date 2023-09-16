@@ -29,7 +29,10 @@ h1 {
     font-size: 16px;
     color: #333; /* Color del texto opcional */
 }
-
+#error{
+    color: red;
+    display: none;
+}
 h2 {
     font-size: 24px;
     margin-bottom: 20px;

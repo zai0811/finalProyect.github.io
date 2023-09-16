@@ -10,13 +10,14 @@ const appThree = params.get('app3');
 
 console.log(nombre, password, app, appTwo, appThree);
 function logOut(){
-    //  window.location.href = windowIndex;
-    console.log(nombre, password);
+    window.location.href = windowIndex;
 }
 if(app === "null"){
     document.getElementById('app1').style.display = 'none';;
 }
 if(appTwo === "null"){
-    console.log(appTwo);
+    document.getElementById('app2').style.display = 'none';;
+}
+if(appThree === "null"){
     document.getElementById('app2').style.display = 'none';;
 }

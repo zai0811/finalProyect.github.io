@@ -29,12 +29,11 @@ function loginf() {
     console.log(userData);
     const name = document.getElementById('name').value;
     const pass = document.getElementById('pass').value;
-    
-    userData.forEach(usuario => {    
-        console.log(usuario);
+    let coincidenciaEncontrada = false; 
+    userData.forEach(usuario => {   
         ///if(usuario.nombre_usuario === null && usuario.contrasena === null) return;
         if(name.includes(usuario.nombre_usuario) && pass.includes(usuario.contrasena)){
-            console.log("HOLA");
+            coincidenciaEncontrada = true;
             if (usuario.rol.includes("usuario")) {
                 const nombre = document.getElementById('name').value;
                 const pass = document.getElementById('pass').value;
@@ -50,12 +49,12 @@ function loginf() {
                 window.location.href = "./pages/main_page.html";
             }
             
-        }else{
-            alert("YOU SHALL NOT PASS");
-            return;
         }
     });
-
+    if (!coincidenciaEncontrada) {
+        document.getElementById("error").style.display = "block";
+        return;
+    }
 }
 
 function singUp() {
