@@ -19,5 +19,5 @@ if(appTwo === "null"){
     document.getElementById('app2').style.display = 'none';;
 }
 if(appThree === "null"){
-    document.getElementById('app2').style.display = 'none';;
+    document.getElementById('app3').style.display = 'none';;
 }

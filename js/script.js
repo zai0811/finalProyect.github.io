@@ -27,12 +27,12 @@ fetch(archivoJSON)
 
 function loginf() {
     console.log(userData);
-    const name = document.getElementById('name').value;
-    const pass = document.getElementById('pass').value;
+    const name = document.getElementById('name').value.toLowerCase();
+    const pass = document.getElementById('pass').value.toLowerCase();
     let coincidenciaEncontrada = false; 
     userData.forEach(usuario => {   
-        ///if(usuario.nombre_usuario === null && usuario.contrasena === null) return;
-        if(name.includes(usuario.nombre_usuario) && pass.includes(usuario.contrasena)){
+        
+        if(name === usuario.nombre_usuario && pass === usuario.contrasena){
             coincidenciaEncontrada = true;
             if (usuario.rol.includes("usuario")) {
                 const nombre = document.getElementById('name').value;
